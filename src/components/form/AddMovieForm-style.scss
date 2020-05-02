@@ -1,0 +1,90 @@
+.Add-Movie-Form {
+  .add-movie-form-wrapper {
+    text-align: center;
+  }
+}
+
+.Page-One {
+  text-align: center;
+  label {
+    color: var(--text-color);
+    padding-right: 2rem;
+  }
+  .film-btn,
+  .series-btn {
+    width: 200px;
+    height: 150px;
+    margin-right: 2rem;
+    margin-bottom: 50px;
+    background: rgba(100, 100, 100, 0.3);
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+  }
+}
+
+.Page-Two,
+.Page-Three,
+.Page-Four,
+.Page-Five {
+  input {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    color: var(--text-color);
+  }
+  label {
+    color: var(--text-color);
+  }
+  button {
+    background: rgba(100, 100, 100, 0.3);
+    color: var(--text-color);
+    margin-right: 2rem;
+  }
+  button:hover {
+    background: rgba(100, 100, 100, 0.8);
+  }
+}
+
+.Page-Two {
+  input {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    color: var(--text-color);
+  }
+  label {
+    color: var(--text-color);
+  }
+  button {
+    background: rgba(100, 100, 100, 0.3);
+    color: var(--text-color);
+  }
+  button:hover {
+    background: rgba(100, 100, 100, 0.8);
+  }
+  textarea {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+  }
+}
+
+.Overview {
+  img {
+    max-width: 5rem;
+  }
+  span {
+    font-size: 1rem;
+  }
+  button {
+    background: rgba(100, 100, 100, 0.3);
+    color: var(--text-color);
+    margin-right: 2rem;
+  }
+  button:hover {
+    background: rgba(100, 100, 100, 0.8);
+  }
+}

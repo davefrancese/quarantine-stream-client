@@ -1,0 +1,37 @@
+.Edit-Template {
+  input {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    min-width: 200px;
+  }
+  h3 {
+    margin-top: 1rem;
+  }
+  button {
+    margin-top: 10px;
+    margin-right: 5px;
+    background: rgba(100, 100, 100, 0.5);
+    color: var(--text-color);
+  }
+  button:hover {
+    background: rgba(100, 100, 100, 0.3);
+  }
+  p {
+    margin: 8px 0 0 0;
+  }
+  label {
+    color: var(--text-color);
+    margin-left: 5px;
+  }
+  .delete-btn {
+    background-color: #8a4746;
+  }
+  .delete-btn:hover {
+    background: red;
+  }
+  textarea {
+    background: transparent;
+    color: var(--text-color);
+  }
+}

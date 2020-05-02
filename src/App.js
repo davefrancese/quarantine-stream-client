@@ -1,25 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import AllMovies from "./components/AllMovies";
+import AddMovieForm from "./components/form/AddMovieForm";
+import Dashboard from "./components/dashboard/Dashboard";
+import EditTemplate from "./components/dashboard/EditTemplate";
+import MovieProfile from "./components/MovieProfile";
+
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <h1 className="main-title">
+          <Link to="/">Quarentine Stream</Link>
+        </h1>
+        <p className="main-subtitle">Currated by Dave Francese</p>
+      </nav>
+      <Switch>
+        <Route exact path="/">
+          <AllMovies />
+        </Route>
+        <Route
+          exact
+          path="/movie/:id"
+          render={props => <MovieProfile {...props} />}
+        />
+
+        <Route exact path="/addmovieform">
+          <AddMovieForm />
+        </Route>
+        <Route exact path="/mymoviedashboard">
+          <Dashboard />
+        </Route>
+        <Route
+          exact
+          path="/dashboard/:movie"
+          render={props => <EditTemplate {...props} />}
+        />
+      </Switch>
+    </Router>
   );
 }
 

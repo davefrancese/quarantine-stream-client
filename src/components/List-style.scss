@@ -1,0 +1,19 @@
+.movie-card {
+  width: 6rem;
+  .movie-poster {
+    max-width: 10rem;
+  }
+  .movie-title {
+    margin-top: 0;
+  }
+  .movie-card-header {
+    display: flex;
+
+    .movie-rating {
+      margin-top: 0;
+    }
+  }
+  .movie-streaming {
+    margin-top: 0;
+  }
+}
