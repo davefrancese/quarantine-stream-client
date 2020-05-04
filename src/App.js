@@ -17,7 +17,7 @@ function App() {
     <Router>
       <nav>
         <h1 className="main-title">
-          <Link to="/">Quarentine Stream</Link>
+          <Link to="/">Quarantine Stream</Link>
         </h1>
         <p className="main-subtitle">Currated by Dave Francese</p>
       </nav>
