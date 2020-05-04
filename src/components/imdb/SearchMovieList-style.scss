@@ -1,0 +1,9 @@
+.Search-Movie-List {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .movie-search-list {
+    margin: 1rem;
+  }
+}

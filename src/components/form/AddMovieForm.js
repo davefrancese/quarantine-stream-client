@@ -88,7 +88,7 @@ const AddMovieForm = () => {
   return (
     <div className="Add-Movie-Form">
       <p>
-        <Link to="/mymoviedashboard">Back to Dashboard</Link>
+        <Link to="/addmovieform">Back</Link>
       </p>
       <div className="add-movie-form-wrapper">
         {renderPage()}
