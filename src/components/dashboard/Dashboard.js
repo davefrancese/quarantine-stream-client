@@ -20,7 +20,7 @@ const Dashboard = () => {
   return (
     <div className="Dashboard">
       <p>
-        <Link to="/addmovieform">Add a Film / Series</Link>
+        <Link to="/howtoaddmovie">Add a Film / Series</Link>
       </p>
       <div className="dashboard-list-wrapper">
         <DashList props={movies} />

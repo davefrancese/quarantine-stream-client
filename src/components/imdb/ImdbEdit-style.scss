@@ -1,0 +1,35 @@
+.Imdb-Edit {
+  display: flex;
+  justify-content: center;
+  p {
+    margin: 10px 0 0 0;
+  }
+  input,
+  textarea,
+  button {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+  }
+  form {
+    margin-right: 5rem;
+  }
+  img {
+    margin-top: 2rem;
+  }
+  button {
+    margin-right: 5px;
+  }
+  button:hover {
+    background: rgba(100, 100, 100, 0.5);
+  }
+  .cancel-btn a {
+    color: var(--text-color);
+  }
+  .cancel-btn a:hover {
+    text-decoration: none;
+  }
+}
+.Imdb-Edit-success {
+  text-align: center;
+}

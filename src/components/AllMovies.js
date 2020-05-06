@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 import List from "./List";
+import FilterMovies from "./FilterMovies";
 
 import "./AllMovies-style.scss";
 
 const AllMovies = () => {
   const [movies, setMovies] = useState([]);
+  const [filterType, setFilterType] = useState("");
 
   useEffect(() => {
     const getAllMovies = async () => {
@@ -19,7 +21,14 @@ const AllMovies = () => {
 
   return (
     <div className="All-Movies">
-      <List props={movies} />
+      <FilterMovies
+        filterType={filterType}
+        setFilterType={setFilterType}
+        movies={movies}
+      />
+      <div className="all-movies-wrapper">
+        <List props={movies} filterType={filterType} />
+      </div>
     </div>
   );
 };

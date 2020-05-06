@@ -8,7 +8,7 @@ import SearchImdb from "./components/imdb/SearchImdb";
 import Dashboard from "./components/dashboard/Dashboard";
 import EditTemplate from "./components/dashboard/EditTemplate";
 import MovieProfile from "./components/MovieProfile";
-import ChooseMovie from "./components/imdb/ChooseMovie";
+import ImdbEdit from "./components/imdb/ImdbEdit";
 
 import "./App.scss";
 
@@ -30,13 +30,13 @@ function App() {
           path="/movie/:id"
           render={props => <MovieProfile {...props} />}
         />
-        <Route exact path="/addmovieform">
+        <Route exact path="/howtoaddmovie">
           <AddChoose />
         </Route>
         <Route
           exact
           path="/choosemovie/:imdbID"
-          render={props => <ChooseMovie {...props} />}
+          render={props => <ImdbEdit {...props} />}
         />
         <Route exact path="/addmoviemanually">
           <AddMovieForm />

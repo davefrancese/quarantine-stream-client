@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 import "./List-style.scss";
 
-const List = ({ props }) => {
-  console.log(props);
+const List = ({ props, filterType, setFilterType }) => {
+  // console.log("List", props);
   if (props.length > 0) {
     return props
       .sort((a, b) => {
-        return a.id - b.id;
+        return b.rating - a.rating;
       })
       .map((movie, i) => {
         return (
