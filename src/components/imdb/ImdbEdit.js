@@ -21,12 +21,11 @@ const ImdbEdit = props => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const update = {
+
+    const newMovie = {
       title: e.target.title.value,
       type: e.target.type.value,
-      genre: e.target.genre.value,
       stars: e.target.stars.value,
-      director_creator: e.target.director_creator.value,
       network: e.target.network.value,
       streamNetwork: e.target.streamNetwork.value,
       rating: e.target.rating.value,
@@ -34,7 +33,19 @@ const ImdbEdit = props => {
       summary: e.target.summary.value,
       trailerURL: e.target.trailerURL.value
     };
-    const post = await axios.post(`http://localhost:5000/postmovie/`, update);
+
+    const newGenre = {
+      name: e.target.genre.value.split(", ")
+    };
+
+    const newDirector = {
+      name: e.target.director.value.split(", ")
+    };
+
+    const post = await axios.post(`http://localhost:5000/postmovie/`, {
+      newGenre
+    });
+    console.log("post-", post);
     setStatus(post.status);
   };
 
@@ -112,7 +123,7 @@ const ImdbEdit = props => {
             <input name="type" defaultValue={seriesTrim(movie.type)} />
             <p>Director/Creator</p>
             <input
-              name="director_creator"
+              name="director"
               defaultValue={nameTrim(movie.director_creator)}
             />
             <p>Genre</p>
@@ -151,7 +162,7 @@ const ImdbEdit = props => {
       );
     }
   };
-  console.log(status);
+  console.log("status=", status);
   return renderForm();
 };
 
