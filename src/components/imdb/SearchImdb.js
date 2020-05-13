@@ -20,7 +20,7 @@ const SearchImdb = () => {
   return (
     <div className="Search-Imdb">
       <p>
-        <Link to="/addmovieform">Back</Link>
+        <Link to="/howtoaddmovie">Back</Link>
       </p>
       <p>Search by Title</p>
       <form onSubmit={e => handleSubmit(e)}>

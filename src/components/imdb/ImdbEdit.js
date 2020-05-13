@@ -21,11 +21,12 @@ const ImdbEdit = props => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-
     const newMovie = {
       title: e.target.title.value,
       type: e.target.type.value,
       stars: e.target.stars.value,
+      director: e.target.director.value,
+      genre: e.target.genre.value,
       network: e.target.network.value,
       streamNetwork: e.target.streamNetwork.value,
       rating: e.target.rating.value,
@@ -33,18 +34,8 @@ const ImdbEdit = props => {
       summary: e.target.summary.value,
       trailerURL: e.target.trailerURL.value
     };
-
-    const newGenre = {
-      name: e.target.genre.value.split(", ")
-    };
-
-    const newDirector = {
-      name: e.target.director.value.split(", ")
-    };
-
-    const post = await axios.post(`http://localhost:5000/postmovie/`, {
-      newGenre
-    });
+    console.log("newMovie=", newMovie);
+    const post = await axios.post(`http://localhost:5000/postmovie`, newMovie);
     console.log("post-", post);
     setStatus(post.status);
   };
@@ -105,6 +96,7 @@ const ImdbEdit = props => {
       return (
         <div className="Imdb-Edit-success">
           <h3>Success!</h3>
+          <p>{}</p>
           <p>
             <Link to="/mymoviedashboard">Dashboard</Link>
           </p>
@@ -157,12 +149,13 @@ const ImdbEdit = props => {
     } else {
       return (
         <div className="Imdb-Edit">
-          <p>Something went wrong. Try again.</p>
+          <p></p>
         </div>
       );
     }
   };
   console.log("status=", status);
+
   return renderForm();
 };
 

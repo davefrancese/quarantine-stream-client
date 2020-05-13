@@ -25,7 +25,7 @@ const MovieProfile = props => {
           <h1 className="movie-profile-title">{movie.title}</h1>
           <p>
             {movie.type === "Film" ? "Directed by" : "Created by"}
-            <span className="movie-director"> {movie.director_creator}</span>
+            <span className="movie-director"> {movie.director}</span>
           </p>
           <h1 className="stream-network">
             <span className="pulse">•</span>

@@ -62,9 +62,7 @@ const EditTemplate = props => {
       id: movie.id,
       title: e.target.title.value,
       type: e.target.type.value,
-      genre: e.target.genre.value,
       stars: e.target.stars.value,
-      director_creator: e.target.director_creator.value,
       network: e.target.network.value,
       streamNetwork: e.target.streamNetwork.value,
       rating: e.target.rating.value,
@@ -74,7 +72,7 @@ const EditTemplate = props => {
     };
 
     const put = await axios.put(
-      `http://localhost:5000/movie/${movie.id}`,
+      `http://localhost:5000/movie/${movie.id}/update`,
       update
     );
     setStatus(put.status);
@@ -82,7 +80,9 @@ const EditTemplate = props => {
 
   const handleDelete = async e => {
     e.preventDefault();
-    const del = await axios.delete(`http://localhost:5000/movie/${movie.id}`);
+    const del = await axios.delete(
+      `http://localhost:5000/movie/${movie.id}/delete`
+    );
     setStatus(del.status);
   };
 
